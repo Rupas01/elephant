@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="elephant.css">
+    <title>tiger</title>
+</head>
+
+<body>
+    <div class="total">
+        <div class="mainContainer">
+            <div class="elephantcontainer">
+                <img src="bg23.png" alt="tiger" class="elephantContainer" id="playButton" onclick="audio.play(),imgbtn()">
+                <audio id="sound" src="elephant.mp3"></audio>
+            </div>
+            <div class="shinchanContainer">
+                <div class="commentBox">
+                    ohh...! that's a elephant <a href="https://en.wikipedia.org/wiki/elephant">click</a> to know more
+                </div>
+                <div class="shinchan">
+                    <img src="shinchan.png" alt="shinchan" id="shinchan">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const audio = new Audio()
+        audio.src = "elephant.mp3"
+        let elephant = document.getElementById('playButton');
+
+        function imgbtn() {
+            elephant.src = 'bg12.png';
+            setTimeout(() => {
+                elephant.src = 'bg23.png';
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>
